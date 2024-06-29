@@ -18,5 +18,23 @@ namespace Negocio
             ret = datos.Listar(region);
             return ret;
         }
+
+        public void Crear(Region region)
+        {
+            DRegion datos = new DRegion();
+            datos.CrearRegion(region);
+        }
+
+        public void Editar(Region region)
+        {
+            DRegion datos = new DRegion();
+            datos.EditarRegion(region);
+        }
+
+        public void Eliminar(Region region)
+        {
+            DRegion datos = new DRegion();
+            datos.Eliminar(region);
+        }
     }
 }

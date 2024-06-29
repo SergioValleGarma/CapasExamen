@@ -14,7 +14,7 @@ Begin
 end
 
 alter proc sp_ReadRegions
-@RegionName nvarchar(100)
+@RegionName nvarchar(100)= ''
 as
 begin
 
@@ -22,6 +22,7 @@ SELECT [RegionId]
       ,[RegionName]
       ,[Enabled]
   FROM [dbo].[Regions] where [Enabled] =1
+  and (RegionName like '%'+@RegionName+'%' or RegionName = '')
 
 end
 
