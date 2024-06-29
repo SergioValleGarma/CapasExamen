@@ -11,7 +11,7 @@ namespace Datos
 {
     public class DRegion
     {
-        public List<Region> Listar(string Nombre)
+        public List<Region> Listar(Region region)
         {
             List<Region> roles = new List<Region>();
 
@@ -24,7 +24,7 @@ namespace Datos
 
                 //Enviar los parámetros
                 SqlParameter parameter = new SqlParameter("@RegionName", SqlDbType.VarChar, 50);
-                parameter.Value = Nombre;
+                parameter.Value = region.RegionName;
                 cmd.Parameters.Add(parameter);
 
                 connection.Open();

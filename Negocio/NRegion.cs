@@ -11,11 +11,11 @@ namespace Negocio
 {
     public class NRegion
     {
-        public List<Region> Listar(string Nombre)
+        public List<Region> Listar(Region region)
         {
             List<Region> ret = new List<Region>();
             DRegion datos = new DRegion();
-            ret = datos.Listar(Nombre);
+            ret = datos.Listar(region);
             return ret;
         }
     }
